@@ -21,6 +21,29 @@ function prixHT($prix) {
  * 
  * @return void Ce void indique qu'il s'agit d'une procédure, et non d'une fonction. void indique qu'elle ne retourne rien, même pas null !
  */
+
+function showMe($produit) {
+    echo '
+        <div class="card text-white bg-dark" style="width: 18rem;">
+        <img src="src/img/'.$produit['img'].'" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> '. $produit[PRODUCT_NAME].'</h5>
+                <p class="card-text">'. $produit['description'].'</small></p>
+                <a href="#" class="btn btn-light ">'. $produit['price'].'€</a>
+            </div>
+        </div>
+    ';
+
+// <div class="card" style="width: 18rem;">
+//   <img src="..." class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">Card title</h5>
+//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+};
+
 function afficheProduit($produit) {
     // Si le prix est inférieur ou égale à douze, la couleur (du prix) va être verte, bleue sinon
     if ($produit['price'] <= 12) {
